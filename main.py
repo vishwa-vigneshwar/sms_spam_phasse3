@@ -1,3 +1,18 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import tensorflow as tf
+from tensorflow import keras
+import tensorflow_hub as hub
+from tensorflow.keras import layers
+from tensorflow.keras.layers import TextVectorization
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.metrics import (classification_report, accuracy_score, confusion_matrix,
+                             precision_score, recall_score, f1_score) 
+import os
 
 for dirname, _, filenames in os.walk('/kaggle/input'):
     for filename in filenames:
